@@ -26,7 +26,7 @@ else % Retirement
 end
 
 if c>0
-    F=(c^(1-sigma))/(1-sigma) -psi*(h^(1+eta))/(1+eta); % The utility function
+    F=(c.^(1-sigma))/(1-sigma) -psi*(h.^(1+eta))/(1+eta); % The utility function
 end
 
 

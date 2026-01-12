@@ -25,12 +25,12 @@ else
 end
 
 if c>0
-    F=(c^(1-sigma))/(1-sigma) -psi*(h^(1+eta))/(1+eta);
+    F=(c.^(1-sigma))/(1-sigma) -psi*(h.^(1+eta))/(1+eta);
 end
 
 % Warm-glow bequest
 if agej==J % Final period
-    warmglow=warmglow1*(aprime^(1-warmglow2))/(1-warmglow2);
+    warmglow=warmglow1*(aprime.^(1-warmglow2))/(1-warmglow2);
     F=F+warmglow;
 end
 % Notice that we have modelled the warm-glow in such a way that you only

@@ -21,12 +21,12 @@ else % Retirement
 end
 
 if c>0
-    F=(c^(1-sigma))/(1-sigma) -psi*(h^(1+eta))/(1+eta); % The utility function
+    F=(c.^(1-sigma))/(1-sigma) -psi*(h.^(1+eta))/(1+eta); % The utility function
 end
 
 % Warm-glow bequest
 if agej==J % Final period
-    warmglow=warmglow1*(sprime^(1-warmglow2))/(1-warmglow2);
+    warmglow=warmglow1*(sprime.^(1-warmglow2))/(1-warmglow2);
     F=F+warmglow;
 end
 

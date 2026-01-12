@@ -29,12 +29,12 @@ else % Retirement
 end
 
 if c>0 % The utility function
-    F=(c^(1-sigma))/(1-sigma) -psi*(h1^(1+eta))/(1+eta)-psi*(h2^(1+eta))/(1+eta);
+    F=(c.^(1-sigma))/(1-sigma) -psi*(h1.^(1+eta))/(1+eta)-psi*(h2.^(1+eta))/(1+eta);
 end
 
 % Warm-glow bequest
 if agej==J % Final period
-    warmglow=warmglow1*(aprime^(1-warmglow2))/(1-warmglow2);
+    warmglow=warmglow1*(aprime.^(1-warmglow2))/(1-warmglow2);
     F=F+warmglow;
 end
 % Notice that we have modelled the warm-glow in such a way that you only
@@ -42,7 +42,7 @@ end
 % risk of dying every period. So we might prefer to model that we get the
 % warm glow bequest if we die at any age. The following commented out two lines
 % implement this alternative. [note: need to add sj to inputs of ReturnFn to use it]
-% warmglow=warmglowparam1*(aprime^(1-warmglowparam2))/(1-warmglowparam2); % Note: same formula as above
+% warmglow=warmglowparam1*(aprime.^(1-warmglowparam2))/(1-warmglowparam2); % Note: same formula as above
 % F=F+(1-sj)*warmglow
 % Note: if using this, have to make sure sj=0 for j=J.
 % Comment: I am not aware of any study saying which of these two
